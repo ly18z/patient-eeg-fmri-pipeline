@@ -1,0 +1,74 @@
+{
+  "run_directory": "pipeline_run01",
+  "open_review_pages": true,
+  "modules": [
+    "convert",
+    "bids",
+    "preprocess",
+    "glm",
+    "native",
+    "curves"
+  ],
+  "manual_qc": true,
+  "root": ".",
+  "dicom": "dicom",
+  "subject": "sub-01",
+  "inputs": {
+    "t1": {
+      "series": 101,
+      "file": "converted/series-101.nii.gz"
+    },
+    "flair": {
+      "series": 201,
+      "file": "converted/series-201.nii.gz"
+    },
+    "dwi": {
+      "series": 301,
+      "file": "converted/series-301.nii.gz"
+    },
+    "rest": {
+      "series": 401,
+      "file": "converted/series-401.nii.gz"
+    },
+    "task_runs": [
+      {
+        "run": "01",
+        "series": 501,
+        "file": "converted/series-501.nii.gz"
+      },
+      {
+        "run": "02",
+        "series": 601,
+        "file": "converted/series-601.nii.gz"
+      }
+    ]
+  },
+  "task": {
+    "name": "motor",
+    "condition": "move",
+    "description": "Replace with the actual motor task instructions",
+    "timing_source": "Replace with the actual trigger log or confirmed timing source",
+    "onsets_seconds": [
+      30,
+      90,
+      150,
+      210,
+      270
+    ],
+    "duration_seconds": 30
+  },
+  "rest": {
+    "band_hz": [
+      0.01,
+      0.1
+    ],
+    "fd_mm": 0.5,
+    "std_dvars": 1.5
+  },
+  "preprocessing": {
+    "templateflow": "work/templateflow",
+    "license": "license.txt",
+    "ignore": [],
+    "download_templates": true
+  }
+}

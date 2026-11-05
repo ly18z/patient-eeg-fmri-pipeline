@@ -1,0 +1,12 @@
+{
+  "run_directory": "results/eeg_run01",
+  "open_review_pages": true,
+  "input": "data/record.bdf",
+  "montage": "standard_1020",
+  "manual_ica": true,
+  "tfr_channels": [
+    "C3",
+    "Cz",
+    "C4"
+  ]
+}

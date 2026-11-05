@@ -1,0 +1,8 @@
+numpy==1.26.4
+torch==2.5.1
+monai==1.4.0
+scipy>=1.11,<1.15
+nibabel>=5.2,<6
+scikit-image>=0.22,<0.25
+huggingface_hub>=0.20,<1
+safetensors>=0.4,<1
